@@ -1,66 +1,112 @@
-<!DOCTYPE html>
-<HTML>
-<HEAD>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
-    <meta name="description" content="Free Web tutorials on HTML and CSS">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <TITLE>CodeGate Android Download</TITLE>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style>
-        .navbar-text {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            text-align: center;
-            margin: auto;
-            padding-top: 10px;
-        }
+      p { margin:20px 0px; }
     </style>
-</HEAD>
-<BODY>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <h3 class="navbar-text">CodeGate Android Download</h3>
-        </div>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron mt-3">
+        <h1>CODE GATE</h1>
+        <h2>App Download</h2>
+        <!-- <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p> -->
+        <!-- <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a> -->
+        <div class="row">
+          <div class="col">
+            <p>iOS</p>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#ios_dev">개발</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#ios_real">운영</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#ios_store">스토어</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="ios_dev">
+                  <p><a class="btn btn-primary" role="button" href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/vig0ztto8w1kdry/manifest.plist">1.0.1 &raquo;</a></p>
+                </div>
+                <div class="tab-pane fade" id="ios_real">
+                  <p><a class="btn btn-primary" href="#" role="button">없음 &raquo;</a></p>
+                </div>
+                <div class="tab-pane fade" id="ios_store">
+                  <p><a class="btn btn-primary" href="#" role="button">없음 &raquo;</a></p>
+                </div>
+            </div>
+          </div>
+      </div>
+
+       <div class="row">
+          <div class="col">
+            <p>Android</p>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#android_dev">개발</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#android_real">운영</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#android_store">스토어</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="android_dev">
+                  <p><a class="btn btn-primary" role="button" href="https://kyuseogi.github.io/download/apk/CODE_GATE_2104291108_v1.0.1D.apk" >1.0.1D &raquo;</a></p>
+                </div>
+                <div class="tab-pane fade" id="android_real">
+                  <p><a class="btn btn-primary" role="button" href="https://kyuseogi.github.io/download/apk/CODE_GATE_2104291201_v1.0.2.apk">1.0.2 &raquo;</a></p>
+                </div>
+                <div class="tab-pane fade" id="android_store">
+                  <p><a class="btn btn-primary" role="button" href="https://kyuseogi.github.io/download/apk/CODEGATE_0405_store.apk">1.0.1 &raquo;</a></p>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      </div>
     </div>
-</nav>
-<div class="container">
-    <div class="">
-        <H1>iOS 1.1.5 개발 버전</H1>
-        <a type="button" class="btn btn-primary btn-lg btn-block" href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/vig0ztto8w1kdry/manifest.plist">1.0.1</a>
-        <H1>Android 1.0.1D 개발 버전</H1>
-        <a type="button" class="btn btn-primary btn-lg btn-block"
-           href="https://kyuseogi.github.io/download/apk/CODE_GATE_2104291108_v1.0.1D.apk">v1.0.1D</a>
-        <hr>
-        <H1>Android 1.0.2 운영 버전</H1>
-        <a type="button" class="btn btn-primary btn-lg btn-block"
-           href="https://kyuseogi.github.io/download/apk/CODE_GATE_2104291201_v1.0.2.apk">v1.0.2</a>
-        <hr>
-        <H1>Android 스토어 배포버전</H1>
-        <a type="button" class="btn btn-primary btn-lg btn-block"
-           href="https://kyuseogi.github.io/download/apk/CODEGATE_0405_store.apk">v1.0.1</a>
-        <hr>
-        <div hidden>
-	        <H1>시연용 수정내역</H1>
-	        <b>v1.0.0</b><br>임시 스플래시 적용<br>
-	        <b>v1.0.0.01</b><br>아이콘 적용, 웹페이지 상단바 제거,스캐너 카테고리 표시<br>
-	        <b>v1.0.0.02</b><br>codegate://finish 적용<br>
-	        <b>v1.0.0.03</b><br>scanm-wrapper.aar 교체, 55배 줌 설정<br>
-	        <hr>
-	        <H1>스토어 배포 수정내역</H1>
-	        <b>v1.0.1</b><br>앱스토어 최초버전<br>
-	        <H1>강제 업데이트 확인용 수정내역</H1>
-	        <b>v1.0.2</b><br>앱스토어 버전확인 APK<br>
-    	</div>
+      <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Developer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" hidden>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                <li class="nav-item dropup">
+                  <a class="nav-link dropdown-toggle" href="https://getbootstrap.com/" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown10">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      </nav>
     </div>
-</div>
-</BODY>
-</HTML>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </body>
+  <script type="text/javascript">
+
+  </script>
+</html>
