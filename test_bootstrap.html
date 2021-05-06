@@ -92,12 +92,15 @@
   </body>
   <script type="text/javascript">
     function fidoReg(bio, user) {
+      Android['fidoInit'](user);
       Android['startFidoReg'](bio, user);
     }
     function fidoAuth(bio, user) {
+      Android['fidoInit'](user);
       Android['startFidoAuth'](bio, user);
     }
     function fidoDelete(bio, user) {
+      Android['fidoInit'](user);
       Android['startFidoDelete'](bio, user);
     }
 
