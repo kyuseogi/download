@@ -61,6 +61,7 @@
       <div class="col-md-6">
         <div class="h-100 p-5 text-bg-dark rounded-3">
           <h2>Deep link</h2>
+          <p class="lead"><a href="javascript:moveAndroid()">랜딩</a></p>
           <p class="lead"><a href="coffeebeanapp02100://register?type=coupon&couponnumber=12345678">쿠폰등록</a></p>
           <p class="lead"><a href="coffeebeanapp02100://register?type=gifticon&couponnumber=12345678">선물등록</a></p>
           <p class="lead"><a href="coffeebeanapp02100://register?type=card&cardnumber=12345678&pinnumber=12345678">선불카드등록</a></p>
@@ -92,3 +93,12 @@
 </div>
 </body>
 </html>
+
+<script>
+
+fun moveAndroid() {
+  //com.coffeebeankorea.purpleorder
+  location.href = "Intent://purple_aos#Intent;scheme=coffeebeanapp02100;package=com.coffeebeankorea.purpleorder;end"
+}
+
+</script>
