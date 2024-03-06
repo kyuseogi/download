@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<body style="display: block;margin: 8px">
+<div style="-webkit-locale: auto;">
+    <button onclick="targetCamera()" style="width: 100%;height: 80px;font-size: 30px">사진촬영&갤러리(accept에 이미지, 카메라 포함)</button><br/><br/>
+    <button onclick="targetCamera2()" style="width: 100%;height: 80px;font-size: 30px">사진촬영&갤러리2(accept에 이미지만)</button><br/><br/>
+    <button onclick="targetCamera3()" style="width: 100%;height: 80px;font-size: 30px">사진촬영3(accept에 이미지만, capture="camera"도 선언)</button><br/>
 
-
-<body>
-<div>
-    <button onclick="targetCamera()">사진촬영</button>
-    <input type="file" accept="image/*" id="fileRef" multiple hidden="hidden" value=""/>
+    <input type="file" accept="image/*;capture='camera'" id="fileRef" multiple hidden="hidden" value=""/>
+    <input type="file" accept="image/*" id="fileRef2" multiple hidden="hidden" value=""/>
+    <input type="file" accept="image/*" capture="camera" id="fileRef3" multiple hidden="hidden" value=""/>
 </div>
 <div id="imgDiv">
+
 
 </div>
 <br/>
@@ -23,7 +27,83 @@
         document.getElementById('fileRef').click();
     }
 
+    function targetCamera2()
+    {
+        document.getElementById('fileRef2').click();
+    }
+
+    function targetCamera3()
+    {
+        document.getElementById('fileRef3').click();
+    }
+
     document.getElementById("fileRef").onchange = function (event){
+        console.log(event.target);
+        const target = event.target;
+        let cnt = target.files.length;
+        console.log(target.files);
+        console.log(cnt);
+
+        if(target.files && cnt > 0)
+        {
+            let url = "";
+            for(let i = 0; i < cnt; i++)
+            {
+
+                const file = target.files[i];
+                console.log(file);
+                url = window.URL.createObjectURL(file);
+
+                let img = document.createElement("img");
+                img.setAttribute("src",url);
+
+                document.getElementById("imgDiv").appendChild(img);
+
+            }
+            /*
+            setTimeout(function() {
+                window.URL.revokeObjectURL(url);
+                event.target.value = "";
+            }, 2000);
+             */
+        }
+        else
+        {
+            event.target.value = "";
+        }
+
+        /*
+        setTimeout(function() {
+            console.log(event.target);
+            const target = event.target;
+            let cnt = target.files.length;
+            console.log(target.files);
+            console.log(cnt);
+            if(target.files && cnt > 0)
+            {
+                for(let i = 0; i < cnt; i++)
+                {
+
+                    const file = target.files[i];
+                    console.log(file);
+
+                    let img = document.createElement("img");
+                    img.setAttribute("src",window.URL.createObjectURL(file));
+
+                    document.getElementById("imgDiv").appendChild(img);
+
+                }
+                event.target.value = ""
+            }
+            else
+            {
+                event.target.value = "";
+            }
+        }, 1000);
+         */
+    }
+
+    document.getElementById("fileRef2").onchange = function (event){
         console.log(event.target);
         const target = event.target;
         let cnt = target.files.length;
@@ -43,7 +123,35 @@
                 document.getElementById("imgDiv").appendChild(img);
 
             }
+            event.target.value = ""
+        }
+        else
+        {
             event.target.value = "";
+        }
+    }
+
+    document.getElementById("fileRef3").onchange = function (event){
+        console.log(event.target);
+        const target = event.target;
+        let cnt = target.files.length;
+        console.log(target.files);
+        console.log(cnt);
+        if(target.files && cnt > 0)
+        {
+            for(let i = 0; i < cnt; i++)
+            {
+
+                const file = target.files[i];
+                console.log(file);
+
+                let img = document.createElement("img");
+                img.setAttribute("src",window.URL.createObjectURL(file));
+
+                document.getElementById("imgDiv").appendChild(img);
+
+            }
+            event.target.value = ""
         }
         else
         {
